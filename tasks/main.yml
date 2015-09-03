@@ -1,0 +1,9 @@
+---
+# tasks file for color-prompt
+- name: add color prompt script
+  template: src=colorprompt.sh.j2 dest={{color_prompt_target_file}} owner=root group=root mode=755
+  when: color_prompt_state is defined and color_prompt_state == "present"
+
+- name: remove color prompt script
+  file: path={{color_prompt_target_file}} state=absent
+  when: color_prompt_state is defined and color_prompt_state == "absent"
