@@ -1,7 +1,7 @@
 ---
 # defaults file for color-prompt
 
-color_prompt_base: '\u@\h \W\$ \e[0m'
+color_prompt_base: '\u@\h \W\$\[\e[0m\] '
 color_prompt_target_file: /etc/profile.d/colorprompt.sh
 color_prompt_fg: Color_Off
 color_prompt_bg: Color_Off
